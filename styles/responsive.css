@@ -35,7 +35,7 @@
   /* Navigation */
   nav {
     position: fixed;
-    width: 50%;
+    width: 80%;
     right: 0;
     top: 0;
     height: 100vh;
@@ -44,26 +44,23 @@
     border-left: 1px solid var(--borderColor);
     z-index: 9;
     transform: translateX(100%);
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
+    padding-top: 6rem;
   }
 
   nav ul {
-    height: 100vh;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
+    gap: 2rem;
   }
 
   .nav-active {
     transform: translateX(0);
   }
-  /* End of Navigation */
 
   :root {
     --sectionPadding: 4rem 0;
   }
 
-  /* Titles */
   .section-title {
     font-size: 1.6rem;
     margin: 0.6rem 0 2.5rem;
@@ -76,20 +73,23 @@
   /* Hero Section */
   #hero {
     grid-template-columns: 1fr;
-    height: fit-content;
+    height: auto;
+    padding: 2rem 0;
   }
 
   .hero-right {
     order: -1;
+    margin-bottom: 2rem;
   }
 
   .hero-right img {
     width: 70%;
+    max-width: 300px;
   }
 
   .hero-left {
     text-align: center;
-    padding-bottom: 5rem;
+    padding: 0 1rem;
   }
 
   .hero-left .pre-title {
@@ -106,20 +106,66 @@
     gap: 1rem;
   }
 
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
   /* Footer */
   footer {
     padding: 2rem 0;
   }
 }
 
-/* Mobile Size */
 @media screen and (max-width: 640px) {
   /* Titles */
   .section-title {
     font-size: 1.3rem;
+    margin: 0.5rem 0 2rem;
   }
 
   .pre-title {
     font-size: 0.7rem;
+    letter-spacing: 0.3rem;
+    padding-left: 30px;
+  }
+
+  .pre-title::before {
+    width: 20px;
+  }
+
+  /* Contact Section */
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Portfolio */
+  .portfolio-cover {
+    height: 200px;
+  }
+
+  /* Services */
+  .service {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero-name {
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .portfolio-tags div {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
   }
 }
